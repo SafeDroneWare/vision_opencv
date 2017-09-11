@@ -1,3 +1,5 @@
+#if _GLIBCXX_USE_CXX11_ABI
+
 #include <opencv2/highgui/highgui.hpp>
 
 namespace cv {
@@ -6,3 +8,5 @@ namespace cv {
     return imencode(ext.c_str(), img, buf, params);
   }
 }
+
+#endif // _GLIBCXX_USE_CXX11_ABI
